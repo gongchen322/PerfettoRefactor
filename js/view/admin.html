@@ -1,0 +1,32 @@
+<div>
+	<div class="header">
+    	<img src="../../assets/pictures/logo.jpg">
+   		<a ui-sref="shop.women">Perfetto</a>
+  	</div>
+  	<div class="admin-board">
+  		<div class="form-style-9" >
+			<ul>
+				<li>
+				    <input type="text" name="field1" class="field-style field-split align-left" placeholder="Name"  ng-model="name"/>
+				    <input type="text" name="field2" class="field-style field-split align-right" placeholder="Color" ng-model="color"/>
+				</li>
+				<li>
+				    <input type="text" name="field3" class="field-style field-split align-left" placeholder="price" ng-model="price"/>
+				    <input type="text" name="field4" class="field-style field-split align-left" placeholder="gender" ng-model="gender"/>
+				</li>
+				<li>
+					<input type="text" name="field5" class="field-style field-full " placeholder="image_small" ng-model="image_small"/>
+				</li>
+				<li>
+				    <input type="text" name="field6" class="field-style field-split align-left" placeholder="image_large" ng-model="image_large"/>
+				    <input type="text" name="field7" class="field-style field-split align-right" placeholder="image_large2" ng-model="image_large2"/>
+				</li>
+				<li>
+				    <textarea type="text" name="field8" class="field-style field-full field-large" placeholder="Description" ng-model="description"></textarea>   
+				</li>
+				<button ng-click="postProduct()">Add Item To Database </button>
+
+			</ul>
+		</div>
+  	</div>
+</div>

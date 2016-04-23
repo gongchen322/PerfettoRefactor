@@ -1,0 +1,78 @@
+<div >
+  <div class="header">
+    <img src="../../assets/pictures/logo.jpg">
+    <a ui-sref="shop.women">Perfetto</a>
+  </div>
+  <ul class="topnav">
+    <li><a ui-sref="shop.women">Back To Shop</a></li> 
+    <li style="float:right;"><a ui-sref="cart">My Treasures</a></li>
+    <li style="float:right;"><a  ui-sref="{{location}}">My Account</a> </li>    
+    <li style="float:right;"><a ng-hide="isLoggedIn">Hello,{{name}}</a></li>
+    <li class="icon">
+        <a href="javascript:void(0);" style="font-size:15px;" ng-click="toggleFunction()">☰</a>
+    </li>
+  </ul>
+
+  <div class="cart-board">
+    <div class="cart">
+      <table class="cart-table">
+
+        <!-- header -->
+        <tr class="cart-header">
+          <td ><b>Item</b></td>
+
+          <td class="td-center"><b>Quantity</b></td>
+          <td class="td-right"><b>Price</b></td>
+          <td />
+        </tr>
+      
+        <!-- empty cart message -->
+        <tr ng-hide="cart.getTotalCount() > 0" >
+          <td class="td-center" colspan="4">Your cart is empty. </td>
+        </tr>
+      
+        <!-- cart items -->
+        <tr ng-repeat="item in cart.items | orderBy:'name'">
+          <td class="cart-unit" >{{item.name}}<br/><img  ng-src="{{item.images}}" /></td>
+          <td class="td-center">
+            <div class="input-append">
+              <!-- use type=tel instead of number to prevent spinners -->
+              <input
+                class="span3 text-center" type="tel" 
+                ng-model="item.quantity" ng-change="cart.saveItems()" />
+              <button 
+                class="btn btn-success" type="button" 
+                ng-disabled="item.quantity >= 1000"
+                ng-click="cart.addItem(item.id, item.name, item.color,item.size, item.price, +1, item.images)">+
+              </button>
+              <button 
+                class="btn btn-inverse" type="button" 
+                ng-disabled="item.quantity <= 1"
+                ng-click="cart.addItem(item.id, item.name, item.color,item.size, item.price, -1, item.images)">-
+              </button>
+            </div>
+          </td>
+          <td class="td-right">{{item.price * item.quantity | currency}}</td>
+          <td class="td-center" title="remove from cart">
+            <button 
+                class="btn btn-inverse" type="button" 
+                ng-click="cart.addItem(item.id, item.name, item.color,item.size, item.price, -10000, item.main_image, item.images)">x
+              </button>
+        
+          </td>
+        </tr>
+      
+        <!-- footer -->
+        <tr class="well">
+          <hr />
+          <td><b>Total</b></td>
+          <td class="td-center"><b>{{cart.getTotalCount()}}</b></td>
+          <td class="td-right"><b>{{cart.getTotalPrice() | currency}}</b></td>
+          <td />
+        </tr>
+      </table>
+      <button ng-click="goCheckout()"class="checkout-btn" type="button" ng-disabled="cart.getTotalCount() <= 0">Check Out</button>
+    </div>
+  </div> 
+</div>
+

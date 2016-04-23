@@ -1,0 +1,56 @@
+<div >
+	<div class="header">
+    	<img src="../../assets/pictures/logo.jpg">
+    	<a ui-sref="shop.women">Perfetto</a>
+  	</div>
+  	<ul class="topnav">
+	    <li><a ui-sref="shop.women">Back To Shop</a></li> 
+	    <li style="float:right;"><a ui-sref="cart">My Treasures</a></li>
+	    <li style="float:right;"><a  ui-sref="{{location}}">My Account</a> </li>    
+	    <li style="float:right;"><a ng-hide="isLoggedIn">Hello,{{loginName}}</a></li>
+	    <li class="icon">
+	        <a href="javascript:void(0);" style="font-size:15px;" ng-click="toggleFunction()">☰</a>
+	    </li>
+  	</ul>
+
+    <div class="login-body">
+    <h2>Login or Create an account</h2>
+	<h2>Registered Customer</h2>
+	<div class="login-input">
+		
+		<br />
+		<input type="email" placeholder="Username (Your Email)" required="" ng-model="email1" />
+		<br />
+		<input type="password"  placeholder="Password" required="" ng-model="password1" />
+		<br />
+		
+   		 <button ng-click="login()">Login</button>
+
+	</div>
+	<hr />
+	<br>
+
+
+	<h2>Register here</h2>
+	<div class="login-input">
+		<br />
+		<input type="text" placeholder="Your name" required="" ng-model="name"  />
+		<br />
+		<input type="email" placeholder="Username (Must be Email Address)" required="" ng-model="email2" />
+		<br />
+		<input type="password" placeholder="Password (minimum length: 7)" required="" ng-model="password2" />
+		<br />
+		<br />
+		<input type="text" placeholder="Phone Number" required="" ng-model="phoneNumber" />
+		<br />
+		<input type="text" placeholder="Shipping Address" required="" ng-model="shippingAddress" />
+		<br />
+		<input type="text" placeholder="Billing Address" required="" ng-model="billingAddress" />
+		<br />
+		<form ng-submit="signup()">
+   		 <button type="submit">Sign Up</button>
+		</form>
+		
+	</div>	
+	</div>
+</div>

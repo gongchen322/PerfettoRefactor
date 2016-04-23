@@ -1,0 +1,46 @@
+<div >
+	<div  class="men-clothing" ng-repeat="item in items">
+    	<div data-content={{item.name}} class="image shadow-effect" ng-click="open(item.id)">
+    		<img class="men-image" ng-src="{{item.product_image1}}" >
+    	</div>
+    	<div class="men-info">
+    		<p>{{item.product_color}}</p>
+	    	<p>{{item.product_price}}</p>
+    	</div>
+    	
+ 	</div>
+	<script type="text/ng-template" id="myModalContent.html">
+        <div class="popup-item" tabindex="-1">
+	        <div class="modal-header">
+	            <h3 class="modal-title"></h3>
+	        </div>
+	        <img class="large-image" ng-src="{{item.product_image2}}" />
+	        <div class="modal-body">
+	            <strong>{{item.product_name}}</strong>
+	            <br />
+	            Size: 
+		        <div class="dropdown">
+				  <button class="drop-btn">{{size}}</button>
+				  <div class="size">
+					  <div class="dropdown-content">
+					    <a class="size-item" ng-click="setSize('Small')">Small</a>
+					    <a class="size-item" ng-click="setSize('Median')">Median</a>
+					    <a class="size-item" ng-click="setSize('Large')">Large</a>
+					  </div>
+					  
+				  </div>
+				</div>
+				<br />
+				<br />
+				Quantity: 
+		        <input id="quantity" type="number" name="quantity" min="1" max="10"/>
+	            <p>Color: {{item.product_color}}</p>
+	     		
+	            <button class="btn btn-primary" type="button" ng-click="addToOrder(item)">Add To Order</button>
+	            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+	        </div>
+	        </div>  
+    </script>
+ 	
+
+</div>

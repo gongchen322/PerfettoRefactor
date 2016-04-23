@@ -1,0 +1,460 @@
+.home-page{
+	 background: url('/assets/pictures/black.jpg') no-repeat ; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  margin:0;
+	  height:100%;
+}
+
+.brand-name{
+	position: relative;
+	color:gold;
+	font-size: 60px;
+	margin-left:30px;
+	top:12px;
+	font-family: Ecolier;
+	text-decoration: none;
+}
+.brand-name-home {
+	position:relative;
+	color:gold;
+	font-size: 70px;
+	margin-left:40px;
+	top:30px;
+	font-family: Ecolier;
+	text-decoration: none;
+}
+
+@font-face {
+    font-family: Ecolier;
+    src: url('/assets/riesling.ttf');
+}
+
+.explore{
+	color:gold;
+	font-family: Ecolier;
+	font-size: 40px;
+	position:absolute;
+	right: 7%;
+	bottom: 12%;
+}
+
+
+body {
+	width:max-width;
+	height:100%;
+	margin:0;
+}
+
+.container {
+	height:2000px;
+	width:auto;
+}
+
+/*Header*/
+.big-header {
+  background: #171717 none repeat  0 0 ;
+  height: 5%; 
+  margin-right:auto;
+  width: auto;
+ }
+
+.contact-header .contact-header-container {
+    font-size: 11px;
+    color: #d8d8d8;
+
+ }
+
+.top-menu{
+ 	position:relative;
+ 	list-style-type: none;
+	right:5%;
+    
+    font-size:25px;
+    color:gold;
+    float:right;
+    margin-bottom:20px;
+ }
+
+.top-menu li{
+	display:inline;
+	margin-left: 20px;
+}
+
+.top-menu a{
+	display:inline;
+	color:gold;
+	text-decoration: none;
+	font-family: Ecolier;
+	font-size:30px;
+	letter-spacing: 2px;
+}
+
+.line-break {
+	background-color: gold;
+	height: 3px;
+}
+
+/*Left Side Menu*/
+.b-menu {
+    background-color: #171717;
+	width:200px;
+	height:100%;
+	float:left;
+	
+	padding-left: 0;
+}
+
+.b-menu li { 
+	font-size: 25px;
+    display: block;
+   
+    list-style-type: none;
+}
+.b-menu li a {
+	padding-top:20px;
+	color: transparent;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 5px #fff;
+	letter-spacing: 1px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.b-menu:hover li a {
+	text-shadow: 0px 0px 5px #fff;
+}
+.b-menu li a:hover {
+	color: #fff;
+	text-shadow: 0px 0px 5px gold;
+	padding-left: 0px;
+}
+ul {
+	padding:10px;
+}
+
+.nested-view-container {
+	width: 100%;
+	height:100%;
+	margin-left:200px;
+	background-color: #3a3a3a;	
+}
+.image {
+    position:relative;
+
+}
+.image img {
+    width:100%;
+    vertical-align:top;
+}
+.image:after, .image:before {
+    position:absolute;
+    opacity:0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.image:after {
+    content:'\A';
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+}
+.image:before {
+    content: attr(data-content);
+    width:100%;
+    color:#fff;
+    z-index:1;
+    bottom:50%;
+    padding:4px 10px;
+    text-align:center;
+	font-color:white;
+	font-size:20px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+.image:hover:after, .image:hover:before {
+    opacity:1;
+}
+
+
+.men-clothing {
+	text-align:center;
+	float:left;	
+	margin-left:2%;
+
+}
+
+.men-clothing p {
+	font-size:20px;
+	color:gold;
+	font-family: 'Helvetica'
+}
+
+/*Popup when click on a image*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  
+  outline: 0;
+}
+
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 1;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+.modal-header {
+  height:3%;
+}
+
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+
+
+.popup-item {
+	position:absolute;
+	background-color: white;
+    width:800px;
+    height:1000px;
+    top: 10%;
+    left: 50%;
+    margin-left: -400px; 
+    margin-top: -40px; 
+    z-index: 1;
+}
+
+.large-image {
+	position:relative;
+	left:5%;
+	width:45%;
+	float:left;
+}
+
+.modal-body {
+  position: relative;
+  padding: 15px;
+  margin-left:50%;
+  text-align: center;
+}
+
+
+/*Drop Down for size*/
+.drop-btn {
+    color: black;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+	margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: gold;
+    display: block;
+    
+}
+
+.dropdown-content a:hover {background-color: gold}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.size{
+	display:inline;
+}
+
+
+
+/* Cart Page*/
+.cart-container {
+	width:100%;
+	height: 100%;
+	margin:0px;
+}
+.cart-board {
+	width:80%;
+	height:60%;
+	margin-left:auto;
+	margin-right: auto;
+
+	
+}
+.cart {
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	height:100%;
+}
+.cart-table {
+	width:70%;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+.cart-header td{
+	font-size:20px;
+}
+.cart-unit img{
+	width: 109px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.checkout-btn {
+	position:relative;
+	float:right;
+}
+
+.big-header-2 {
+  background: none repeat  0 0 #171717;
+  height: 10%;
+}
+.login-container h1,h2,button{
+	text-align: center;
+}
+
+
+.login-input {
+
+	padding-left:25%;
+	width:40%;
+	margin-left:auto;
+	margin-right: auto;
+
+}
+.login-input input{
+	font-size:15px;
+	text-align:center;
+	width:300px;
+	height:40px;
+}
+.login-input button{
+	width:100px;
+	height:30px;
+}
+
+
+/*Profile Page*/
+
+.profile-container {
+
+	width:max-width;
+	height:100%;
+}
+
+.profile-body {
+
+}
+.nested-view-container-2 {
+	width: 90%;
+	height:100%;
+	margin-left:10%;
+	background-color: white;	
+}
+
+.user-info {
+	text-align:center;
+}
+
+.user-info input{
+	font-size:15px;
+	text-align:center;
+	width:300px;
+	height:40px;
+}
+
+/*Checkout Page*/
+.checkout-body {
+	text-align: center;
+}
+
+.order-info {
+	text-align: center;
+}
+
+.order-info  >table {
+	border-collapse: collapse;
+}
+.order-info  tr td{
+	border:solid 1px black;
+}
+
+
+
+
+/*Collection Page */
+.collection-1 {
+	display: block;
+	height:40%;
+	
+}
+.collection-2 {
+	display: block;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float:right;
+}
+
+.collection-panel {
+	position: relative;
+	width:50%;
+}
+
+.collection-panel {
+	margin-left:2%;
+}
+
+.collection-panel > div{
+	position: absolute;
+	margin-left:4%;
+}
+
+/*Store Map Page */
+#map {
+        width: 80%;
+        height:40%;
+      }
+

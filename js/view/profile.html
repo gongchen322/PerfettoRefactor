@@ -1,0 +1,18 @@
+<div >
+	<div class="header">
+		<img src="../../assets/pictures/logo.jpg">
+		<a ui-sref="shop.women">Perfetto</a>
+	</div>
+	<ul class="topnav">
+		<li><a ui-sref=".userInfo">User Info</a></li>
+	    <li><a ui-sref=".orders">Orders</a></li>
+	    <li><a ui-sref="shop.women">Back To Shop</a></li>     
+	    <li  style="float:right;"><a ui-sref="cart">My Treasures</a></li>  
+    	<li  style="float:right;"><a ng-hide="isLoggedIn">Hello,{{name}}</a></li>
+		<li class="icon">
+		    <a href="javascript:void(0);" style="font-size:15px;" ng-click="toggleFunction()">☰</a>
+		</li>
+	</ul>
+
+	<div class="nested-view-container" ui-view></div>
+</div>
