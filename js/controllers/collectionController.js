@@ -1,6 +1,9 @@
 angular.module('myApp').controller('collectionController', ['$scope','$state','dataService',
 	function ($scope,$state,dataService) {	
-    	$scope.collection_imgs = dataService.store.collections;	 
+		$scope.store=dataService.buildStore('women').then(function(data){
+        	$scope.collection_imgs = data.collections;
+        });
+    		 
    		$scope.currentId=1;
 
 		$('.collection-panel').each(function(){
