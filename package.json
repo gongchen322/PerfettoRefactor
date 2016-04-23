@@ -4,7 +4,7 @@
   "description": "An E-Commerce Web Application developed with AngularJS, NodeJS and Sqlite",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --progress --colors --watch |node server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
