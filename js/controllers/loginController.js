@@ -51,7 +51,7 @@ angular.module('myApp').controller('loginController', ['$scope','$state','$http'
             localStorage.setItem('userInfo',data);
             Authorization.userInfo = JSON.parse(data);
             console.log("aaa "+Authorization.authorized);
-            console.log("user info is now "+ Authorization.userInfo);
+            console.log( Authorization.userInfo);
         }).error(function(data, status) {
            alert("Wrong username or password!")
           })   

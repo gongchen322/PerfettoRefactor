@@ -34,8 +34,12 @@
 				<br />
 				Quantity: 
 		        <input id="quantity" type="number" name="quantity" min="1" max="10"/>
-	            <p>Color: {{item.product_color}}</p>
-	     		
+	            <p></p>
+	            <strong>Color: </strong>
+	            <p>{{item.product_color}}</p>
+	            <strong>Description: </strong>
+	     		<p>{{item.product_description}}</p>
+	           
 	            <button class="btn btn-primary" type="button" ng-click="addToOrder(item)">Add To Order</button>
 	            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
 	        </div>

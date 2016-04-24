@@ -38,19 +38,13 @@ app.get('/products/:gender', function (req,res) {
 
 //Post /product
 app.post('/products', function (req,res) {
-	var userName= req.get('admin_user');
-	if(userName!=='gong27@purdue.edu'){
-		res.status(400).send();
-	}
-	else{
+	
 		var body = _.pick(req.body, 'product_name', 'product_color', 'product_price','product_gender','product_image1', 'product_image2','product_image3','product_description');
-		db.products.create(body).then(function (products) {
-			
+		db.products.create(body).then(function (product) {
+			res.json(product.toJSON());
 		}, function (e) {
 			res.status(400).json(e);
 		});
-	}
-	
 });
 
 // DELETE /products/:id

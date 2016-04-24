@@ -24,9 +24,6 @@ angular.module('myApp').controller('adminController', ['$scope','$http','$state'
         var req = {
           method: 'POST',
           url: '/products',
-          headers: {
-              'admin_user': Authorization.userInfo.email
-          },
           data: JSON.stringify(body)
         }; 
            
