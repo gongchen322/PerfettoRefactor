@@ -221,6 +221,21 @@ ul.topnav li.icon {display: none;}
     z-index: 1;
 }
 
+@media screen and (max-width:480px) {
+  .popup-item {
+  position:absolute;
+  background-color: white;
+    width:80%;
+    height:70%;
+    top: 10%;
+    left: 20%;
+    margin-left: -50px; 
+    margin-top: -40px; 
+    z-index: 1;
+}
+
+}
+
 .large-image {
     position: relative;
     left: 5%;
