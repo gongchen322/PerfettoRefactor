@@ -1,3 +1,32 @@
+.home-page{
+   background: url('/assets/pictures/black.jpg') no-repeat ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin:0;
+    height:100%;
+}
+
+.brand-name-home {
+  position:relative;
+  color:gold;
+  font-size: 70px;
+  margin-left:40px;
+  top:30px;
+  font-family: Ecolier;
+  text-decoration: none;
+}
+
+.explore{
+  color:gold;
+  font-family: Ecolier;
+  font-size: 40px;
+  position:absolute;
+  right: 7%;
+  bottom: 12%;
+}
+
 /*------Header------*/
 body {
 	margin:0;
