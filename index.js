@@ -1,4 +1,3 @@
-
 var myApp = angular.module('myApp', ['ui.router','ngAnimate', 'ui.bootstrap']);
 
 myApp
@@ -93,20 +92,6 @@ myApp
         templateUrl: 'js/view/storeMap.html',
         controller: 'storeMapController'
         });
-        /*
-         .state('shop.sale', {
-        url: '/sale',
-        templateUrl: 'js/view/sale.html'
-        })
-
-        
-
-         .state('shop.stores', {
-        url: '/stores',
-        templateUrl: 'js/view/stores.html'
-        });*/
-
-        
 })
 .run(function(_,$rootScope, $state, Authorization) {
   $rootScope._ = window._;

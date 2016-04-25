@@ -15,6 +15,7 @@ var todoNextId = 1;
 
 
 app.use(bodyParser.json());
+app.use('/build',express.static(path.join(__dirname, '/build')));
 app.use('/js',express.static(path.join(__dirname, '/js')));
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 app.get('/', function(req, res) {

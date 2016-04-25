@@ -22,13 +22,6 @@ module.exports = function (db) {
 			}).catch(function () {
 				res.status(401).send();
 			});
-
-			// db.user.findByToken(token).then(function (user) {
-			// 	req.user = user;
-			// 	next();
-			// }, function () {
-			// 	res.status(401).send();
-			// });
 		}
 	};
 };
